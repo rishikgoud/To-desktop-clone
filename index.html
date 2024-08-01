@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/c03ab062e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3238f2",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="p-3 flex bg-white items-center justify-between shadow-lg lg:px-6"
+    >
+      <a href="" class="flex items-center">
+        <img
+          src="Assets/asset 0.png"
+          alt=""
+          class="object-cover max-w-12 max-h-12"
+        />
+        <span class="text-lg pl-2 font-medium">ToWindows</span>
+      </a>
+      <div class="flex hidden lg:flex gap-12">
+        <a href="" class="font-bold hover:text-primary">Pricing</a>
+        <a href="" class="font-bold hover:text-primary">Docs</a>
+        <a href="" class="font-bold hover:text-primary">Changelog </a>
+        <a href="" class="font-bold hover:text-primary">Blog</a>
+        <a href="" class="font-bold hover:text-primary">Login</a>
+      </div>
+
+      <button
+        class="flex items-center gap-4 hidden lg:flex mr-5 border-2 px-6 py-2 rounded-md hover:border-gray-400"
+      >
+        <img src="Assets/asset 1.svg" alt="" />
+        <span class="font-medium">Electron Developer</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <button class="lg:hidden" onclick="openMenu()">
+        <i class="fa-solid fa-bars text-2xl pr-3"></i>
+      </button>
+
+      <div id="open-function" class="hidden fixed z-10 bg-white inset-0">
+        <div class="nav-bar flex items-center justify-between shadow-lg p-3">
+          <a href="" class="flex items-center">
+            <img
+              src="Assets/asset 0.png"
+              alt=""
+              class="object-cover max-w-12 max-h-12"
+            />
+            <span class="text-lg pl-2 font-medium">ToWindows</span>
+          </a>
+          <button class="md:hidden" onclick="openMenu()">
+            <i class="fa-solid fa-xmark text-2xl pr-3"></i>
+          </button>
+        </div>
+        <div class="mt-6">
+          <a
+            href=""
+            class="block p-3 m-3 font-medium hover:bg-gray-50 rounded-md"
+            >Pricing</a
+          >
+          <a
+            href=""
+            class="block p-3 m-3 font-medium hover:bg-gray-50 rounded-md"
+            >Docs</a
+          >
+          <a
+            href=""
+            class="block p-3 m-3 font-medium hover:bg-gray-50 rounded-md"
+            >Changelog</a
+          >
+          <a
+            href=""
+            class="block p-3 m-3 font-medium hover:bg-gray-50 rounded-md"
+            >Blog</a
+          >
+          <a
+            href=""
+            class="block p-3 m-3 font-medium hover:bg-gray-50 rounded-md"
+            >Login</a
+          >
+        </div>
+
+        <div class="h-[1px] bg-gray-300">
+          <button
+            class="mt-6 w-full flex items-center gap-4 flex mr-5 border-2 px-6 py-2 rounded-md hover:border-gray-400"
+          >
+            <img src="Assets/asset 1.svg" alt="" />
+            <span class="font-medium">Electron Developer</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section id="hero_section" class="px-6 lg:px-8 min-h-screen">
+        <div id="here_header" class="max-w-4xl mx-auto pt-8 pb-32 flex flex-col">
+          <div id="version_text"class="flex gap-3 my-6 flex-row items-center group px-2 bg-yellow-50 border-2 border-yellow-300 rounded-lg w-fit shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+            <div class="w-2 h-2 rounded-full bg-yellow-400 border-yellow-500"></div>
+            <p class="text-yellow-600 font-medium">v0.22.0
+              <span class="text-yellow-950">Electron 30, Chromium 124, Node 20.11.1</span>
+              <i class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-1 transition duration-300"></i>
+            </p>
+          </div>
+          <h1 class="text-5xl font-medium sm:text-center">Web app to desktop app in minutes</h1>
+          <p class="max-w-2xl mx-auto mt-8 text-xl leading-8 text-gray-800">Take your web app codebase and transform it into a cross platform desktop app with native functionality.</p>
+          <div class="flex flex-col">
+            <a class="text-lg inline-block py-3 px-8 rounded-lg border-3 bg-primary-700">Download now</a>
+            <button>Read docs</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>   
+  </body>
+</html>
